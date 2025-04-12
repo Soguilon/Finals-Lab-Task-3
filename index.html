@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finals Lab Task 3 - MySQL Product Database Management</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(120deg, #000 30%, #020f1f 70%);
+      color: #00bfff;
+      overflow-x: hidden;
+      animation: bgShift 15s ease-in-out infinite alternate;
+      transition: background 2s ease-in-out;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      animation: neonGlow 2s infinite alternate;
+      box-shadow: 0 0 15px #00bfff;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease-in-out;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff;
+    }
+
+    h2 {
+      color: #00bfff;
+      text-shadow: 0 0 5px #00bfff;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: 5px;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    .screenshot img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00bfff;
+      animation: floatImage 4s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
+      100% { text-shadow: 0 0 20px #00bfff, 0 0 30px #00bfff; }
+    }
+
+    @keyframes floatImage {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes neonGlow {
+      from { box-shadow: 0 0 10px #00bfff; }
+      to { box-shadow: 0 0 25px #00bfff, 0 0 50px #00bfff; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00bfff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00bfff;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-link:hover {
+      background-color: #0099cc;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff;
+    }
+  </style>
+</head>
+<body>
+  <header>Finals Lab Task 3 - MySQL Product Database Management</header>
+
+  <section>
+    <p>This portfolio demonstrates learning MySQL by creating and managing a product database. The task includes creating a table, adding constraints, inserting valid products, and modifying table fields to organize a database effectively using basic SQL.</p>
+    <a href="https://github.com/Soguilon/Finals-Lab-Task-3" target="_blank">Go to the Finals Lab Task 3 Github</a>
+    <p>Download the Word file: 
+      <a class="download-link" href="https://github.com/user-attachments/files/19715523/Soguilon.Carl.Asnef.B.FINALS3.EDM.SQL.docx" download>Download Word File</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Step by Step Process</h2>
+    <p><strong>Step 1:</strong></p>
+    <ul>
+      <li>Create a table named `products`.</li>
+      <li>Add three fields:
+        <ul>
+          <li>`id` (auto-increment and primary key)</li>
+          <li> `product_name` (text up to 100 characters, cannot be empty)</li>
+          <li> `price` (decimal number)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong>Step 2:</strong> Add a Rule</p>
+    <ul>
+      <li>Add a `CHECK` constraint to ensure `price` is greater than 0.</li>
+    </ul>
+
+    <p><strong>Step 3:</strong> Insert Valid Products</p>
+    <ul>
+      <li>Insert products with positive prices:
+        <ul>
+          <li>Laptop – 999.99</li>
+          <li>Smartphone – 599.99</li>
+          <li>Tablet – 299.99</li>
+          <li>Keyboard – 19.99</li>
+          <li>Mouse – 14.99</li>
+          <li>Desk Lamp – 24.99</li>
+          <li>Speakers – 9.99</li>
+        </ul>
+      </li>
+      <li>Skip products with negative prices.</li>
+    </ul>
+
+    <p><strong>Step 4:</strong> Update the Table</p>
+    <ul>
+      <li>Change the `product_name` field to allow up to 120 characters.</li>
+    </ul>
+
+    <h2>Screenshots of the Process</h2>
+    <p><strong>Task 1:</strong></p>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/a74d8293-47c5-4699-aa4d-6ef429b1ed3f" alt="Task 1">
+    </div>
+
+    <p><strong>Task 2:</strong></p>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/a87d5907-9db1-460a-b23b-d118e860340f" alt="Task 2">
+    </div>
+
+    <p><strong>Task 3:</strong></p>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/6c4da79d-d849-47ad-8fc4-897c0cd81174" alt="Task 3">
+    </div>
+
+    <p><strong>Task 4:</strong></p>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/55206384-6b19-4fd5-a520-d1513baccb5f" alt="Task 4">
+    </div>
+
+    <h2>Table Structure</h2>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/8cd141f7-1c83-439c-8da2-e7ad587b562f" alt="Table Structure">
+    </div>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/a843ccfc-5112-4f64-b091-e1d84a3d89d1" alt="Table Structure">
+    </div>
+
+    <h2>ER Diagram</h2>
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/ac377255-d962-4ec8-ae05-a7c3f3866377" alt="ER Diagram">
+    </div>
+  </section>
+</body>
+</html>
