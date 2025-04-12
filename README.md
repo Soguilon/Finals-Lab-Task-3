@@ -1,4 +1,4 @@
-# Finals-Lab-Task-3
+# [Finals-Lab-Task-3](https://github.com/user-attachments/files/19715523/Soguilon.Carl.Asnef.B.FINALS3.EDM.SQL.docx)
 - This portfolio is about learning MySQL by creating and managing a product database. It includes simple tasks like making a table, adding rules, inserting correct data, and changing a field. The goal is to understand how to build and organize a database using basic SQL.
 
 # Step by Step Process:
